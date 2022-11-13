@@ -1,34 +1,69 @@
-body{
-    background-color:rgb(54, 54, 54);
+body {
+    background-color: rgb(54, 54, 54);
 
-    
-}
-
-main{
 
 }
 
-h1{
+h1 {
     font-size: 50px;
     margin: 0;
 }
 
-.greeting-section{
+.greeting-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /*set it to fill viewport~X*/
+    height: 90vh;
+    /*set it to fill viewport~X*/
     width: 100vw;
     margin: 0px;
-    overflow: hidden; /*hide anything that flows off-screen*/
+    overflow: hidden;
+    /*hide anything that flows off-screen*/
     background-color: bisque;
 }
 
-.introduction-section{
+.introduction-section {
+    display: flex;
+    padding: 5%;
+    align-items: center;
     height: 80vh;
 }
 
-.cards-section{
+.introduction-section > * {
+    /*use [classname + > + * to select all children]*/
+    border-left: 5px solid magenta;
+    Height: 60vh;
+    width: 100vw;
+    margin: 2rem;
+}
+
+.video-section {
+    background-color: aqua;
+}
+
+.tags-section {
+    background-color: pink;
+
+
+    display: flex;
+    flex-direction: column;
+}
+
+.cards-section {
+    height: 100vh;
     background-color: rgb(201, 170, 170);
+}
+
+.card{
+    background-color: cadetblue;
+    height: 400px;
+    width: 300px;
+}
+
+* {
+    overflow-x: hidden;
+    /*this makes sure anything that extends
+    the website in a horizontal direction,
+    doesn't*/
 }
