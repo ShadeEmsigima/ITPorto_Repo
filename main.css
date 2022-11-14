@@ -43,16 +43,33 @@ p{
     margin: 2rem;
 }
 
+
 .video-section {
     background-color: aqua;
 }
 
 .tags-section {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 24px;
     background-color: pink;
+}
 
+.tag{
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color:white;
+    transition: background-color 250ms;
+    margin: 5px;
+    padding: 3px;
+    /*inner space; between text and
+    bg edge*/
+    max-width: max-content;
+    /*only make it large enough to fit
+    content without wrapping a sentence*/
+    border-radius: 5px;
+}
 
-    display: flex;
-    flex-direction: column;
+.tag:hover{
+    background-color: cadetblue;
 }
 
 .cards-section {
