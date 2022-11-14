@@ -5,8 +5,13 @@ body {
 }
 
 h1 {
-    font-size: 50px;
+    font-family: 'Forum', cursive;
+    font-size: 100px;
     margin: 0;
+}
+
+p{
+    font-family: 'Roboto Flex', sans-serif;
 }
 
 .greeting-section {
