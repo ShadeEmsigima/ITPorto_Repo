@@ -14,15 +14,15 @@
     <title>A dev with character</title>
 </head>
 
-<body onscroll="easeIn()">
+<body onscroll="checkPos()">
     <main>
-        <div id="kip" class="greeting-section">
+        <div id="greet" class="greeting-section">
             <h1>Lisanne Bakker</h1>
             <h2>personal tools & growth</h2>
             <p>scroll to explore</p>
 
         </div>
-        <div  class="introduction-section">
+        <div id="introduction" class="introduction-section">
             <div class="video-section"> 
                 <h2>VIDEO SECTION 1</h2>
                 <video controls width="800">
@@ -43,11 +43,11 @@
 
             </div>
         </div>
-        <div class="cards-section">Me too!
-          <div id="cards">
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
+        <div id="cards" class="cards-section">
+          <div>
+            <div class="card">this is a card item</div>
+            <div class="card">this is a card item</div>
+            <div class="card">this is a card item</div>
           </div>  
         </div>
     </main>

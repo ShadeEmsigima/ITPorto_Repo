@@ -1,7 +1,5 @@
 body {
     background-color: rgb(54, 54, 54);
-
-
 }
 
 h1 {
@@ -13,6 +11,8 @@ h1 {
 p{
     font-family: 'Roboto Flex', sans-serif;
 }
+
+
 
 .greeting-section {
     display: flex;
@@ -73,14 +73,21 @@ p{
 }
 
 .cards-section {
-    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(201, 170, 170);
+}
+
+#card{
+    display: flex;
+    gap: 8px;
+    max-width: 250px;
+    width: 100% - 20px;
 }
 
 .card{
     background-color: cadetblue;
-    height: 400px;
-    width: 300px;
 }
 
 * {
@@ -89,3 +96,4 @@ p{
     the website in a horizontal direction,
     doesn't*/
 }
+
