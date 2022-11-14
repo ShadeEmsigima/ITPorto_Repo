@@ -1,9 +1,18 @@
-main{
-    background-color: aqua;
+:root{
+    --color-main: rgb(211, 239, 255) ;
+    --collor-accent: rgb(55, 55, 202);
+    --color-secondary: grey;
+    --color-tertiary: rgb(54, 54, 54);
+
+    --fade-in-duration: 500ms;
 }
 
-body {
-    background-color: rgb(54, 54, 54);
+body{
+    margin: 0;
+}
+
+main{
+    background-color: var(--color-main);
 }
 
 h1 {
@@ -17,7 +26,6 @@ p{
 }
 
 
-
 .greeting-section {
     display: flex;
     flex-direction: column;
@@ -29,8 +37,10 @@ p{
     margin: 0px;
     overflow: hidden;
     /*hide anything that flows off-screen*/
-    background-color: bisque;
+    background-color: var(--color-main);
     opacity: 0;
+    transition: opacity var(--fade-in-duration) ease-in-out;
+    
 }
 
 .introduction-section {
@@ -38,37 +48,39 @@ p{
     padding: 5%;
     align-items: center;
     height: 80vh;
+    
     opacity: 0;
+    transition: opacity var(--fade-in-duration) ease-in-out;
 }
 
 .introduction-section > * {
     /*use [classname + > + * to select all children]*/
-    border-left: 5px solid magenta;
     Height: 60vh;
     width: 100vw;
     margin: 2rem;
 }
 
-
 .video-section {
-    background-color: rgb(170, 108, 118);
+    background-color: var(--color-secondary);
 }
 
 .tags-section {
     font-family: 'Roboto Flex', sans-serif;
     font-size: 24px;
-    background-color: pink;
+    min-width: 10px;
+    
 }
 
 .tag{
     box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color:white;
     transition: background-color 250ms;
-    margin: 5px;
+    margin: 20px;
     padding: 3px;
     /*inner space; between text and
     bg edge*/
     max-width: max-content;
+    max-height: max-content;
     /*only make it large enough to fit
     content without wrapping a sentence*/
     border-radius: 5px;
@@ -76,23 +88,35 @@ p{
 
 .tag:hover{
     background-color: cadetblue;
+    transform: translateY(-3px) scale(1.1);
 }
 
 .cards-section {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
+    display: grid;
+    grid-template-areas: ". .";
+    grid-template-rows: 3fr 2fr 1fr;
+    padding: 50px;
     height: 100vh;
-    background-color: rgb(201, 170, 170);
+    background-color:var(--color-tertiary);
+
     opacity: 0;
+    transition: opacity var(--fade-in-duration) ease-in-out;
+
 }
 
 .card{
-    background-color: cadetblue;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--color-main);
+
     border:2px;
-    border-color: black;
-    height: 100px;
-    width: 100px;
+    border-radius: 1rem;
+    width: 100%;
+    transition: all 400ms;
+    gap: 5px;
+    grid-area: ".";
+    max-width: 75%;
 }
 
 * {
