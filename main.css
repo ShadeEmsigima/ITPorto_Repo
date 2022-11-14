@@ -62,17 +62,20 @@ p{
 .tags-section {
     font-family: 'Roboto Flex', sans-serif;
     font-size: 24px;
+    min-width: 10px;
+    
 }
 
 .tag{
     box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color:white;
     transition: background-color 250ms;
-    margin: 5px;
+    margin: 20px;
     padding: 3px;
     /*inner space; between text and
     bg edge*/
     max-width: max-content;
+    max-height: max-content;
     /*only make it large enough to fit
     content without wrapping a sentence*/
     border-radius: 5px;
@@ -80,36 +83,35 @@ p{
 
 .tag:hover{
     background-color: cadetblue;
+    transform: translateY(-3px) scale(1.1);
 }
 
 .cards-section {
     display: grid;
-    grid-template-areas: 
-    "long1   long2"
-    "long1   long2"
-    "long3 long3";
-
-    padding: 3px;
-    justify-content: center;
-    align-items: center;
+    grid-template-areas: ". .";
+    grid-template-rows: 3fr 2fr 1fr;
+    padding: 50px;
     height: 100vh;
     background-color:var(--color-tertiary);
     opacity: 0;
+
 }
 
 .card{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: var(--color-main);
+
     border:2px;
     border-radius: 1rem;
-    padding: 10px;
+    width: 100%;
+    transition: all 400ms;
     gap: 5px;
-    height: 400px;
-    width: 300px;
+    grid-area: ".";
+    max-width: 75%;
 }
 
-.card #long1{grid-area: long1;}
-.card #short1{grid-area: short1;}
-.card #long2{grid-area: long2;}
 
 * {
     overflow-x: hidden;
