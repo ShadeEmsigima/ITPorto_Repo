@@ -1,17 +1,38 @@
-function easeIn(){
-    console.log("doing a thing")
-    const elem = document.getElementById('kip');
+function checkPos(){
+    //save all sections in const
+    const cGreet = document.getElementById('greet');
+    const cIntroduction = document.getElementById('introduction');
+    const cCards = document.getElementById('cards');
     
-    if(visualViewport.pageTop<=elem.offsetHeight && visualViewport.pageTop>=elem.offsetTop){
-        console.log("viewing " + elem.id)
-        if(elem.children.opacity == 0) console.log("opacity = 0")
-        else{console.log("opacity != 0")}
+    //track the middle of user's current view
+    var userPos = visualViewport.pageTop + (visualViewport.height/2)
+
+    //track which is the currently viewed element
+    var elem
+
+    //calc if pos is within element's bottom and top
+    if(userPos <= cGreet.offsetHeight && userPos >= cGreet.offsetTop){
+        elem = cGreet  
+        console.log(elem.id)
     }
-        
-    else
-        console.log("not in view")
+    else if (userPos <= cIntroduction.offsetTop + cIntroduction.offsetHeight && userPos >= cIntroduction.offsetTop){
+        elem = cIntroduction
+        console.log(elem.id)
+    }
+    else {
+        elem = cCards
+        console.log(elem.id)
+    }
+    
+    elem.style.opacity = 1;
+
+    console.log("--------------------" + visualViewport.pageTop + " - " + visualViewport.height) //determine element pos
+   // console.log("top: " + elem.offsetTop + " offset height: " + elem.offsetHeight)  //determen user's position
+}
 
 
-    //console.log(visualViewport.pageTop) //determine element pos
-    //console.log("top: " + elem.offsetTop + " offset height: " + elem.offsetHeight)  //determen user's position
+
+function hi(){
+    //console.log("HERE! OVER HERE!")
+    //html: onwheel="hi()"
 }

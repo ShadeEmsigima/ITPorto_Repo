@@ -1,7 +1,9 @@
+main{
+    background-color: aqua;
+}
+
 body {
     background-color: rgb(54, 54, 54);
-
-
 }
 
 h1 {
@@ -13,6 +15,8 @@ h1 {
 p{
     font-family: 'Roboto Flex', sans-serif;
 }
+
+
 
 .greeting-section {
     display: flex;
@@ -26,6 +30,7 @@ p{
     overflow: hidden;
     /*hide anything that flows off-screen*/
     background-color: bisque;
+    opacity: 0;
 }
 
 .introduction-section {
@@ -33,6 +38,7 @@ p{
     padding: 5%;
     align-items: center;
     height: 80vh;
+    opacity: 0;
 }
 
 .introduction-section > * {
@@ -45,7 +51,7 @@ p{
 
 
 .video-section {
-    background-color: aqua;
+    background-color: rgb(170, 108, 118);
 }
 
 .tags-section {
@@ -73,14 +79,20 @@ p{
 }
 
 .cards-section {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
     height: 100vh;
     background-color: rgb(201, 170, 170);
+    opacity: 0;
 }
 
 .card{
     background-color: cadetblue;
-    height: 400px;
-    width: 300px;
+    border:2px;
+    border-color: black;
+    height: 100px;
+    width: 100px;
 }
 
 * {
@@ -89,3 +101,4 @@ p{
     the website in a horizontal direction,
     doesn't*/
 }
+
