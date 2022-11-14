@@ -1,7 +1,9 @@
 const cGreet = document.getElementById('greet');
 
 function loadGreeting(){
+    console.log("welcome")
     cGreet.style.opacity = 1;
+
 }
 
 function checkPos(){

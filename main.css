@@ -3,6 +3,8 @@
     --collor-accent: rgb(55, 55, 202);
     --color-secondary: grey;
     --color-tertiary: rgb(54, 54, 54);
+
+    --fade-in-duration: 500ms;
 }
 
 body{
@@ -13,7 +15,6 @@ main{
     background-color: var(--color-main);
 }
 
-
 h1 {
     font-family: 'Forum', cursive;
     font-size: 100px;
@@ -23,6 +24,7 @@ h1 {
 p{
     font-family: 'Roboto Flex', sans-serif;
 }
+
 
 .greeting-section {
     display: flex;
@@ -37,6 +39,8 @@ p{
     /*hide anything that flows off-screen*/
     background-color: var(--color-main);
     opacity: 0;
+    transition: opacity var(--fade-in-duration) ease-in-out;
+    
 }
 
 .introduction-section {
@@ -44,7 +48,9 @@ p{
     padding: 5%;
     align-items: center;
     height: 80vh;
+    
     opacity: 0;
+    transition: opacity var(--fade-in-duration) ease-in-out;
 }
 
 .introduction-section > * {
@@ -53,7 +59,6 @@ p{
     width: 100vw;
     margin: 2rem;
 }
-
 
 .video-section {
     background-color: var(--color-secondary);
@@ -93,7 +98,9 @@ p{
     padding: 50px;
     height: 100vh;
     background-color:var(--color-tertiary);
+
     opacity: 0;
+    transition: opacity var(--fade-in-duration) ease-in-out;
 
 }
 
@@ -111,7 +118,6 @@ p{
     grid-area: ".";
     max-width: 75%;
 }
-
 
 * {
     overflow-x: hidden;
