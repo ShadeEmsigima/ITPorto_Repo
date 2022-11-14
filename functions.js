@@ -1,6 +1,12 @@
+const cGreet = document.getElementById('greet');
+
+function loadGreeting(){
+    cGreet.style.opacity = 1;
+}
+
 function checkPos(){
     //save all sections in const
-    const cGreet = document.getElementById('greet');
+    
     const cIntroduction = document.getElementById('introduction');
     const cCards = document.getElementById('cards');
     
@@ -11,11 +17,11 @@ function checkPos(){
     var elem
 
     //calc if pos is within element's bottom and top
-    if(userPos <= cGreet.offsetHeight && userPos >= cGreet.offsetTop){
-        elem = cGreet  
-        console.log(elem.id)
-    }
-    else if (userPos <= cIntroduction.offsetTop + cIntroduction.offsetHeight && userPos >= cIntroduction.offsetTop){
+    // if(userPos <= cGreet.offsetHeight && userPos >= cGreet.offsetTop){
+    //     elem = cGreet  
+    //     console.log(elem.id)
+    // }
+    /*else */if (userPos <= cIntroduction.offsetTop + cIntroduction.offsetHeight && userPos >= cIntroduction.offsetTop){
         elem = cIntroduction
         console.log(elem.id)
     }
