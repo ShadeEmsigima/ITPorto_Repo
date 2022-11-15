@@ -48,7 +48,7 @@ p{
     padding: 5%;
     align-items: center;
     height: 80vh;
-    
+
     opacity: 0;
     transition: opacity var(--fade-in-duration) ease-in-out;
 }
