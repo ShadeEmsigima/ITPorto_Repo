@@ -23,8 +23,9 @@
 
 .introduction-section {
     display: flex;
-    padding: 5%;
+    padding: 15%;
     align-items: center;
+    justify-content: center;
     height: 80vh;
     opacity: 0;
     transition: opacity var(--fade-in-duration) ease-in-out;
@@ -32,35 +33,43 @@
 
 #doos{
     display: flex;
-    gap: 5px;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: white;
     border-radius: 20px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    width: fit-content + 5px;
+    min-height: 10%;
+    max-height:fit-content;
 }
 
-.introduction-section > * {
+/* .introduction-section > * {
     /*use [classname + > + * to select all children]*/
-    Height: 60vh;
+  /*  Height: 60vh;
     width: 100vw;
     margin: 2rem;
-}
+} */
 
 .video-section {
     border: 2px;
     border-radius: 20px;
     justify-content: center;
     align-items: center;
+    /* note to self: video width is determined in main.css */
+    position: relative;
+    left: 0px;
 }
 
+
 .tags-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     font-family: 'Roboto Flex', sans-serif;
-    flex-direction: row;
     font-size: 24px;
     min-width: 10px;
-    
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
 }
 
 .tag{
