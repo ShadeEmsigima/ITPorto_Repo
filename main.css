@@ -16,8 +16,10 @@ main{
 }
 
 h1 {
-    font-family: 'Forum', cursive;
-    font-size: 100px;
+    color:white;
+text-shadow: 2px 2px 2px rgb(68, 68, 68);
+    font-family: 'Forum', cursive, font-family Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif;
+    font-size: 10em;
     margin: 0;
 }
 
@@ -30,17 +32,23 @@ p{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     align-items: center;
-    height: 90vh;
+    height: 95vh;
     /*set it to fill viewport~X*/
     width: 100vw;
     margin: 0px;
     overflow: hidden;
     /*hide anything that flows off-screen*/
-    background-color: var(--color-main);
+
+
+    background-color: var(--color-main); /*always make sure there is backup bg color*/
     opacity: 0;
     transition: opacity var(--fade-in-duration) ease-in-out;
-    
+    background-image: url("/ima/hero2.jpg");
+    background-position: 0%;
+    transition: background-position;
+    animation: floating 10s infinite;
 }
 
 .introduction-section {
@@ -48,7 +56,6 @@ p{
     padding: 5%;
     align-items: center;
     height: 80vh;
-
     opacity: 0;
     transition: opacity var(--fade-in-duration) ease-in-out;
 }
@@ -141,3 +148,16 @@ p{
     doesn't*/
 }
 
+@keyframes floating{
+    from{
+        background-position: 0% 0%;
+    }
+
+    25%{
+        background-position: 3% 5%;
+    }
+
+    to{
+        background-position: 0% 0%;
+    }    
+}
