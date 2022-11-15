@@ -1,0 +1,128 @@
+.greeting-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 95vh;
+    /*set it to fill viewport~X*/
+    width: 100vw;
+    margin: 0px;
+    overflow: hidden;
+    /*hide anything that flows off-screen*/
+
+
+    background-color: var(--color-main); /*always make sure there is backup bg color*/
+    opacity: 0;
+    transition: opacity var(--fade-in-duration) ease-in-out;
+    background-image: url("/ima/hero2.jpg");
+    background-position: 0%;
+    transition: background-position;
+    animation: floating 10s infinite;
+}
+
+.introduction-section {
+    display: flex;
+    padding: 5%;
+    align-items: center;
+    height: 80vh;
+    opacity: 0;
+    transition: opacity var(--fade-in-duration) ease-in-out;
+}
+
+#doos{
+    display: flex;
+    gap: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.introduction-section > * {
+    /*use [classname + > + * to select all children]*/
+    Height: 60vh;
+    width: 100vw;
+    margin: 2rem;
+}
+
+.video-section {
+    border: 2px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.tags-section {
+    font-family: 'Roboto Flex', sans-serif;
+    flex-direction: row;
+    font-size: 24px;
+    min-width: 10px;
+    
+    text-align: center;
+}
+
+.tag{
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color:var(--collor-main);
+    transition: background-color 250ms;
+    margin: 20px;
+    padding: 3px;
+    /*inner space; between text and
+    bg edge*/
+    max-width: max-content;
+    max-height: max-content;
+    /*only make it large enough to fit
+    content without wrapping a sentence*/
+    border-radius: 5px;
+}
+
+.tag:hover{
+    background-color: var(--collor-accent);
+    transform: translateY(-3px) scale(1.1);
+}
+
+.cards-section {
+    display: grid;
+    grid-template-areas: ". .";
+    grid-template-rows: 3fr 2fr 1fr;
+    padding: 50px;
+    height: 100vh;
+    background-color:var(--color-tertiary);
+
+    opacity: 0;
+    transition: opacity var(--fade-in-duration) ease-in-out;
+
+}
+
+.card{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--color-main);
+
+    border:2px;
+    border-radius: 1rem;
+    width: 100%;
+    transition: all 400ms;
+    gap: 5px;
+    grid-area: ".";
+    max-width: 75%;
+}
+
+
+
+@keyframes floating{
+    from{
+        background-position: 0% 0%;
+    }
+
+    25%{
+        background-position: 3% 5%;
+    }
+
+    to{
+        background-position: 0% 0%;
+    }    
+}
