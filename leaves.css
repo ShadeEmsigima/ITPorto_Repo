@@ -1,0 +1,15 @@
+:root{
+    --drizzle-speed:4s;
+}
+
+.leaf{
+    margin-top: -200px;
+    color: aquamarine;
+    animation: drizzleUp var(--drizzle-speed) ease-in infinite;
+    position:absolute; /*vital for @keyframes!!!*/
+    
+}
+@keyframes drizzleUp {
+        from{margin-top: 0;}
+        to{margin-top: -100%;}
+    }

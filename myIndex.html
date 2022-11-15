@@ -11,36 +11,47 @@
     </style>
 
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="leaves.css">
     <title>A dev with character</title>
 </head>
 
-<body onload="loadGreeting()" onscroll="checkPos()">
+<body 
+        onload="loadGreeting()"
+        onscroll="checkPos()">
     <main>
         <div id="greet" class="greeting-section">
-            <h1>Lisanne Bakker</h1>
-            <h2>personal tools & growth</h2>
-            <p>scroll to explore</p>
-
-        </div>
-        <div id="introduction" class="introduction-section">
-            <div class="video-section"> 
-                <h2>VIDEO SECTION 1</h2>
-                <video controls width="800">
-                    <source src="introvideo.mp4">
-                </video>
+            <div>
+                <h1>Lisanne Bakker</h1>
+                <h2>personal tools & growth</h2>
+                <p>scroll to explore</p>
             </div>
-            <div class="tags-section">
-                <div class="tag">user centered design</div>
-                <div class="tag">tooling</div>
-                <div class="tag">design and development</div>
-                <div class="tag">HTML</div>
-                <div class="tag">CSS</div>
-                <div class="tag">Javascript</div>
-                <div class="tag">Java</div>
-                <div class="tag">C#</div>
-                <div class="tag">creativity</div>
-                <div class="tag">SCRUM</div>
-
+        </div>
+        
+        <!-- <div class="leaf">
+            <img src="/leaves/image.png"> 
+        </div> -->
+        
+        <div id="introduction" class="introduction-section">
+            <div id="doos">
+                <div class="video-section">
+                    <video controls width="800">
+                        <source src="introvideo.mp4">
+                        <h2>Insert a nice quote</h2>
+                    </video>
+                </div>
+                <div class="tags-section">
+                    <div class="tag">user centered design</div>
+                    <div class="tag">tooling</div>
+                    <div class="tag">design and development</div>
+                    <div class="tag">HTML</div>
+                    <div class="tag">CSS</div>
+                    <div class="tag">Javascript</div>
+                    <div class="tag">Java</div>
+                    <div class="tag">C#</div>
+                    <div class="tag">creativity</div>
+                    <div class="tag">SCRUM</div>
+    
+                </div>
             </div>
         </div>
         <div id="cards" class="cards-section">
@@ -53,6 +64,7 @@
     </main>
 
     <script src="functions.js" defer></script>
+    <script src="leaves.js" defer></script>
 
 </body>
 

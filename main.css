@@ -1,6 +1,6 @@
 :root{
     --color-main: rgb(211, 239, 255) ;
-    --collor-accent: rgb(55, 55, 202);
+    --collor-accent: rgb(143, 209, 159);
     --color-secondary: grey;
     --color-tertiary: rgb(54, 54, 54);
 
@@ -48,9 +48,19 @@ p{
     padding: 5%;
     align-items: center;
     height: 80vh;
-    
+
     opacity: 0;
     transition: opacity var(--fade-in-duration) ease-in-out;
+}
+
+#doos{
+    display: flex;
+    gap: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 .introduction-section > * {
@@ -61,19 +71,24 @@ p{
 }
 
 .video-section {
-    background-color: var(--color-secondary);
+    border: 2px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .tags-section {
     font-family: 'Roboto Flex', sans-serif;
+    flex-direction: row;
     font-size: 24px;
     min-width: 10px;
     
+    text-align: center;
 }
 
 .tag{
     box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color:white;
+    background-color:var(--collor-main);
     transition: background-color 250ms;
     margin: 20px;
     padding: 3px;
@@ -87,7 +102,7 @@ p{
 }
 
 .tag:hover{
-    background-color: cadetblue;
+    background-color: var(--collor-accent);
     transform: translateY(-3px) scale(1.1);
 }
 
