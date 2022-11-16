@@ -3,7 +3,6 @@ const cGreet = document.getElementById('greet');
 function loadGreeting(){
     console.log("welcome")
     cGreet.style.opacity = 1;
-
 }
 
 function checkPos(){
@@ -19,11 +18,11 @@ function checkPos(){
     var elem
 
     //calc if pos is within element's bottom and top
-    // if(userPos <= cGreet.offsetHeight && userPos >= cGreet.offsetTop){
-    //     elem = cGreet  
-    //     console.log(elem.id)
-    // }
-    /*else */if (userPos <= cIntroduction.offsetTop + cIntroduction.offsetHeight && userPos >= cIntroduction.offsetTop){
+    if(userPos <= cGreet.offsetHeight && userPos >= cGreet.offsetTop){
+        elem = cGreet  
+        console.log(elem.id)
+    }
+    else if (userPos <= cIntroduction.offsetTop + cIntroduction.offsetHeight && userPos >= cIntroduction.offsetTop){
         elem = cIntroduction
         console.log(elem.id)
     }
@@ -34,13 +33,6 @@ function checkPos(){
     
     elem.style.opacity = 1;
 
-    console.log("--------------------" + visualViewport.pageTop + " - " + visualViewport.height) //determine element pos
+    console.log("--------------------" + visualViewport.pageTop) //determine element pos
    // console.log("top: " + elem.offsetTop + " offset height: " + elem.offsetHeight)  //determen user's position
-}
-
-
-
-function hi(){
-    //console.log("HERE! OVER HERE!")
-    //html: onwheel="hi()"
 }
