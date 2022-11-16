@@ -5,6 +5,8 @@
     --color-tertiary: rgb(54, 54, 54);
 
     --fade-in-duration: 500ms;
+
+    --something: white;
 }
 
 body{
@@ -36,4 +38,3 @@ p{
     text-shadow: 2px 2px 2px rgba(155, 79, 17, 0.8);
     font-family: 'Forum', cursive, font-family Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif;
 }
-

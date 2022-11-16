@@ -15,6 +15,7 @@
     background-color: var(--color-main); /*always make sure there is backup bg color*/
     opacity: 0;
     transition: opacity var(--fade-in-duration) ease-in-out;
+    
     background-image: url("/ima/hero2.jpg");
     background-position: 0%;
     transition: background-position;
@@ -37,6 +38,7 @@
     justify-content: space-evenly;
     align-items: center;
     border-radius: 20px;
+    background-color: white;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
     width: fit-content + 5px;
     min-height: 10%;
